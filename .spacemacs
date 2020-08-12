@@ -97,7 +97,6 @@ values."
                                       (browse-kill-ring)
                                       (helpful)
                                       (crux)
-                                      (workgroups2)
                                       (org-jira)
                                       )
    ;; A list of packages that cannot be updated.
