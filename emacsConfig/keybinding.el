@@ -1,5 +1,6 @@
 (global-set-key (kbd "C-x C-,") 'ace-window)
-(global-set-key (kbd "C-c c") 'comment-region)
+(global-set-key (kbd "C-c C-c c") 'comment-region)
+(global-set-key (kbd "C-c C-c u") 'uncomment-region)
 (global-set-key (kbd "C-s") 'helm-swoop)
 (global-set-key (kbd "C-x <left>") 'evil-jump-backward)
 (global-set-key (kbd "M-[ M-p f") 'projectile-find-file)
@@ -31,3 +32,4 @@
 (global-set-key (kbd "C-c r") 'crux-rename-file-and-buffer)
 
 (global-set-key (kbd "C-c y") 'browse-kill-ring)
+(global-set-key (kbd "M-x") 'helm-M-x)
