@@ -3,4 +3,5 @@
 (dimmer-configure-helm)
 (dimmer-mode t)
 (setq dimmer-fraction 0.3)
-(workgroups-mode 1)
+(require 'spaceline-config)
+(workgroups-mode)
