@@ -406,6 +406,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(browse-kill-ring-highlight-current-entry t)
  '(browse-kill-ring-highlight-inserted-item 'pulse)
+ '(exec-path
+   '("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/Cellar/emacs-plus@27/27.1/libexec/emacs/27.1/x86_64-apple-darwin19.6.0" "/Users/nikolas.de-giorgis/bin" "/Users/nikolas.de-giorgis/mongodb-macos-x86_64-enterprise-4.2.7/bin" "/usr/local/bin" "/usr/local/go/bin" "/usr/local/MacGPG2/bin" "/usr/local/munki" "/Library/Apple/usr/bin" "/Users/nikolas.de-giorgis/.jabba/jdk/adopt@1.11.0-6/Contents/Home/bin" "/Users/nikolas.de-giorgis/go/bin" "/Users/nikolas.de-giorgis/.krew/bin" "/usr/local/opt/fzf/bin" "/Users/nikolas.de-giorgis/.n/bin" "/usr/local/opt/coreutils/libexec/gnubin" "/usr/local/opt/findutils/libexec/gnubin" "~/bin" "/Users/nikolas.de-giorgis/.cargo/bin"))
  '(history-delete-duplicates t)
  '(lsp-file-watch-ignored
    '("[/\\\\]\\.git$" "[/\\\\]\\.hg$" "[/\\\\]\\.bzr$" "[/\\\\]_darcs$" "[/\\\\]\\.svn$" "[/\\\\]_FOSSIL_$" "[/\\\\]\\.idea$" "[/\\\\]\\.ensime_cache$" "[/\\\\]\\.eunit$" "[/\\\\]node_modules$" "[/\\\\]\\.fslckout$" "[/\\\\]\\.tox$" "[/\\\\]\\.stack-work$" "[/\\\\]\\.bloop$" "[/\\\\]\\.metals$" "[/\\\\]target$" "[/\\\\]\\.ccls-cache$" "[/\\\\]\\.deps$" "[/\\\\]build-aux$" "[/\\\\]autom4te.cache$" "[/\\\\]\\.reference$" "[/\\\\]venv$" "[/\\\\]\\venv$" "[/\\\\]\\.mypy_cache$"))
