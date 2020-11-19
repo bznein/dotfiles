@@ -11,3 +11,4 @@ export KUBECONFIG=~/.kube/config
 
 
 source ~/internal/functions.sh
+source <(curl -s https://raw.githubusercontent.com/bznein/k8sBashHelpers/main/functions.sh)
