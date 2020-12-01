@@ -6,11 +6,13 @@
 (global-set-key (kbd "M-[ M-p f") 'projectile-find-file)
 (global-set-key (kbd "M-[ M-p g") 'projectile-grep)
 (global-set-key (kbd "M-[ M-p r") 'projectile-replace)
+(global-set-key (kbd "M-[ M-p h") 'helm-projectile)
 (global-set-key (kbd "M-[ M-p s") 'projectile-switch-project)
 (global-set-key (kbd "M-[ M-p b") 'projectile-switch-to-buffer)
 
-(global-set-key (kbd "M-[ M-h i") 'helm-semantic-or-imenu)
-
+(global-set-key (kbd "M-[ M-p i") 'helm-semantic-or-imenu)
+(global-set-key (kbd "M-[ M-p r") 'lsp-find-references)
+(global-set-key (kbd "M-[ M-p a") #'helm-imenu-anywhere)
 
 (global-set-key (kbd "C-h f") #'helpful-callable)
 
