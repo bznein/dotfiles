@@ -4,3 +4,4 @@ alias gpp="git push || fuck"
 alias feedback="git commit -m\"PR Feedback\""
 alias watch='watch '
 alias master='git switch master'
+alias mergemaster='git commit -m\"merge from master\"'
