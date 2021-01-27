@@ -3,5 +3,6 @@ alias branches=" git for-each-ref --sort=-committerdate refs/heads/ | awk -F'/' 
 alias gpp="git push || fuck"
 alias feedback="git commit -m\"PR Feedback\""
 alias watch='watch '
-alias master='git switch master'
-alias mergemaster='git commit -m\"merge from master\"'
+alias master='git switch master 2> /dev/null || git switch main'
+alias wip='git commit -m"wip"'
+alias mergemaster='git commit -m"merge from master"'
