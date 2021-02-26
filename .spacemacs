@@ -99,6 +99,7 @@ values."
                                       (org-jira)
                                       (workgroups2)
                                       (imenu-anywhere)
+                                      (kubernetes)
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
