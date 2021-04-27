@@ -89,6 +89,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'()
    dotspacemacs-additional-packages '(
+                                      (evergreen)
                                       (forge)
                                       (kubernetes)
                                       (exec-path-from-shell)
@@ -101,7 +102,7 @@ values."
                                       (org-jira)
                                       (workgroups2)
                                       (imenu-anywhere)
-                                      (kubernetes)
+                                      (request)
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -409,21 +410,27 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(browse-kill-ring-highlight-current-entry t)
- '(browse-kill-ring-highlight-inserted-item 'pulse)
+ '(browse-kill-ring-highlight-inserted-item (quote pulse))
  '(exec-path
-   '("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/Cellar/emacs-plus@27/27.1/libexec/emacs/27.1/x86_64-apple-darwin19.6.0" "/Users/nikolas.de-giorgis/bin" "/Users/nikolas.de-giorgis/mongodb-macos-x86_64-enterprise-4.2.7/bin" "/usr/local/bin" "/usr/local/go/bin" "/usr/local/MacGPG2/bin" "/usr/local/munki" "/Library/Apple/usr/bin" "/Users/nikolas.de-giorgis/.jabba/jdk/adopt@1.11.0-6/Contents/Home/bin" "/Users/nikolas.de-giorgis/go/bin" "/Users/nikolas.de-giorgis/.krew/bin" "/usr/local/opt/fzf/bin" "/Users/nikolas.de-giorgis/.n/bin" "/usr/local/opt/coreutils/libexec/gnubin" "/usr/local/opt/findutils/libexec/gnubin" "~/bin" "/Users/nikolas.de-giorgis/.cargo/bin"))
+   (quote
+    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/Cellar/emacs-plus@27/27.1/libexec/emacs/27.1/x86_64-apple-darwin19.6.0" "/Users/nikolas.de-giorgis/bin" "/Users/nikolas.de-giorgis/mongodb-macos-x86_64-enterprise-4.2.7/bin" "/usr/local/bin" "/usr/local/go/bin" "/usr/local/MacGPG2/bin" "/usr/local/munki" "/Library/Apple/usr/bin" "/Users/nikolas.de-giorgis/.jabba/jdk/adopt@1.11.0-6/Contents/Home/bin" "/Users/nikolas.de-giorgis/go/bin" "/Users/nikolas.de-giorgis/.krew/bin" "/usr/local/opt/fzf/bin" "/Users/nikolas.de-giorgis/.n/bin" "/usr/local/opt/coreutils/libexec/gnubin" "/usr/local/opt/findutils/libexec/gnubin" "~/bin" "/Users/nikolas.de-giorgis/.cargo/bin")))
  '(history-delete-duplicates t)
  '(lsp-file-watch-ignored
-   '("[/\\\\]\\.git$" "[/\\\\]\\.hg$" "[/\\\\]\\.bzr$" "[/\\\\]_darcs$" "[/\\\\]\\.svn$" "[/\\\\]_FOSSIL_$" "[/\\\\]\\.idea$" "[/\\\\]\\.ensime_cache$" "[/\\\\]\\.eunit$" "[/\\\\]node_modules$" "[/\\\\]\\.fslckout$" "[/\\\\]\\.tox$" "[/\\\\]\\.stack-work$" "[/\\\\]\\.bloop$" "[/\\\\]\\.metals$" "[/\\\\]target$" "[/\\\\]\\.ccls-cache$" "[/\\\\]\\.deps$" "[/\\\\]build-aux$" "[/\\\\]autom4te.cache$" "[/\\\\]\\.reference$" "[/\\\\]venv$" "[/\\\\]\\venv$" "[/\\\\]\\.mypy_cache$"))
+   (quote
+    ("[/\\\\]\\.git$" "[/\\\\]\\.hg$" "[/\\\\]\\.bzr$" "[/\\\\]_darcs$" "[/\\\\]\\.svn$" "[/\\\\]_FOSSIL_$" "[/\\\\]\\.idea$" "[/\\\\]\\.ensime_cache$" "[/\\\\]\\.eunit$" "[/\\\\]node_modules$" "[/\\\\]\\.fslckout$" "[/\\\\]\\.tox$" "[/\\\\]\\.stack-work$" "[/\\\\]\\.bloop$" "[/\\\\]\\.metals$" "[/\\\\]target$" "[/\\\\]\\.ccls-cache$" "[/\\\\]\\.deps$" "[/\\\\]build-aux$" "[/\\\\]autom4te.cache$" "[/\\\\]\\.reference$" "[/\\\\]venv$" "[/\\\\]\\venv$" "[/\\\\]\\.mypy_cache$")))
  '(lsp-file-watch-threshold 5000)
  '(org-agenda-files
-   '("/Users/nikolas.de-giorgis/org/work/Enterprise/LDAP.org" "/Users/nikolas.de-giorgis/org/Gobernetes.org" "/Users/nikolas.de-giorgis/org/personalProjects.org" "/Users/nikolas.de-giorgis/.org-jira/"))
+   (quote
+    ("/Users/nikolas.de-giorgis/org/work/Enterprise/LDAP.org" "/Users/nikolas.de-giorgis/org/Gobernetes.org" "/Users/nikolas.de-giorgis/org/personalProjects.org" "/Users/nikolas.de-giorgis/.org-jira/")))
  '(package-selected-packages
-   '(web-mode tagedit slim-mode scss-mode sass-mode pug-mode impatient-mode htmlize helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data add-node-modules-path ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired f evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))
+   (quote
+    (evg evergreen tern ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired f evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
  '(projectile-globally-ignored-directories
-   '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "venv" ".mypy_cache" "vendor"))
+   (quote
+    (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "venv" ".mypy_cache" "vendor")))
  '(recentf-exclude
-   '("COMMIT_EDITMSG\\'" "/Users/nikolas.de-giorgis/.emacs.d/elpa/develop/" "/Users/nikolas.de-giorgis/.emacs.d/.cache/" "/Users/nikolas.de-giorgis/org/*" "/Users/nikolas.de-giorgis/.org-jira/*"))
+   (quote
+    ("COMMIT_EDITMSG\\'" "/Users/nikolas.de-giorgis/.emacs.d/elpa/develop/" "/Users/nikolas.de-giorgis/.emacs.d/.cache/" "/Users/nikolas.de-giorgis/org/*" "/Users/nikolas.de-giorgis/.org-jira/*")))
  '(vc-follow-symlinks t)
  '(wg-load-last-workgroup nil)
  '(wg-session-load-on-start t))
