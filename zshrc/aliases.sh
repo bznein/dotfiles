@@ -9,6 +9,7 @@ alias mergemaster='git commit -m"merge from master"'
 alias pullmaster='git pull origin master || git pull origin main'
 alias branch="git for-each-ref --sort=-committerdate refs/heads/ | cut -d$'\t' -f2 | cut -d '/' -f3 | fzf | xargs -n1 git switch"
 alias lastdiff='git diff $(git rev-parse HEAD)~ $(git rev-parse HEAD)'
+alias rebasemaster='git pull origin master && git rebase master'
 
 # WORK
 alias cleancontainer="docker container ls --all | grep mongodb-enterprise-operator | cut -d$' ' -f 1 | xargs -n1 docker container rm"
