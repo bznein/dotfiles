@@ -8,3 +8,7 @@ pull_request() {
 rh_login() {
     docker login -u unused scan.connect.redhat.com -p "$1"
 }
+
+commit() {
+    git commit -m "$1"
+}
