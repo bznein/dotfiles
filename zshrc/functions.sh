@@ -12,3 +12,8 @@ rh_login() {
 commit() {
     git commit -m "$1"
 }
+
+
+docker_exec() {
+     docker run -it --entrypoint sh "$1"
+}
