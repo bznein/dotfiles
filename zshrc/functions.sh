@@ -17,3 +17,12 @@ commit() {
 docker_exec() {
      docker run -it --entrypoint sh "$1"
 }
+
+e2e() {
+    if [[ $# -eq 2 ]]
+    then
+        make e2e test="$1" light=true
+    else
+        make e2e test="$1"
+    fi
+}
