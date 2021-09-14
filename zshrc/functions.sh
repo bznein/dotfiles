@@ -21,8 +21,8 @@ docker_exec() {
 e2e() {
     if [[ $# -eq 2 ]]
     then
-        make e2e test="$1" light=true
+        unset GOFLAGS && rm -rf vendor && make e2e test="$1" light=true
     else
-        make e2e test="$1"
+        unset GOFLAGS && rm -rf vendor && make e2e test="$1"
     fi
 }
