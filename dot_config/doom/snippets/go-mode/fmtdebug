@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: fmtdebug
+# --
+fmt.Printf("%+v\n", ${1:arg})$0
