@@ -54,3 +54,6 @@
 (package! protobuf-mode)
 (package! code-review)
 (package! framemove)
+(package! git-link)
+(package! gh-notify)
+(package! go-tag)

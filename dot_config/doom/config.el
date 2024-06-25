@@ -100,3 +100,9 @@
             ;; include *Code-Review* buffer into current workspace
             (persp-add-buffer (current-buffer))))
 (framemove-default-keybindings) ;; default prefix is Meta
+(setq git-link-open-in-browser 't)
+
+(map! :leader
+      (:prefix ("r" . "repositories")
+               (:desc "Open Github at point" "g" #'git-link
+                      )))

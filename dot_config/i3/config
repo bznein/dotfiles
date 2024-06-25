@@ -200,6 +200,7 @@ bar {
 }
 
 bindsym $mod+F2 exec --no-startup-id rofi -modi combi -show combi  -show-icons
+bindsym $mod+C exec --no-startup-id  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+Ctrl+l exec i3lock-fancy
 for_window [class="Yad"] floating enable
 exec_always --no-startup-id exec i3-workspace-names-daemon
@@ -213,10 +214,11 @@ exec_always /home/bznein/.screenlayout/home.sh
 for_window [class="^.*"] border pixel 0
 
 
-exec_always --no-startup-id /home/bznein/.config/i3/scripts/launch_aars.sh
-exec_always --no-startup-id python3 /home/bznein/Documents/Bazarr/bazarr.py
-#exec_always snap start tautulli
-exec_always deluged
+exec_always qbittorrent
+exec_always dunst
 exec_always --no-startup-id alacritty --class "scratch-terminal"
-for_window [class="scratch-terminal"] floating enable, move to scratchpad border pixel 5
+for_window [class="scratch-terminal"] floating enable, move to scratchpad border pixel 5 resize set width 1000, resize set height 1000
 bindsym F12 scratchpad show
+exec_always greenclip daemon
+exec_always npm run --prefix ~/Documents/multi-scrobbler/ start
+exec_always /home/bznein/Documents/i3-switch-if-workspace-empty/i3-switch-if-workspace-empty --keep-same-output
